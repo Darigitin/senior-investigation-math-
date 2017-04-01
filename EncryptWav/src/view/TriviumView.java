@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class TriviumView{
 
-    Scanner keyboard = new Scanner(System.in);
+    private Scanner keyboard = new Scanner(System.in);
     public String getFilePath(){
         System.out.println("Please enter path to audio file: ");
         return keyboard.nextLine();

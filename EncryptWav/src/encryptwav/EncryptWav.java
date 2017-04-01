@@ -14,7 +14,6 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package encryptwav;
 
 import java.util.Scanner;
 
@@ -44,12 +43,9 @@ public class EncryptWav
 
         WavFile wavFileToTest = WavFile.readFromFilePath(filePathToReadFrom, keyArray, IVArray);
 
-        String filePathToWriteTo =
-            filePathToReadFromMinusExtension
-            + "-ReadThenWritten"
-            + fileExtension;
-
-        wavFileToTest.filePath = filePathToWriteTo;
+        wavFileToTest.filePath = filePathToReadFromMinusExtension
+        + "-ReadThenWritten"
+        + fileExtension;
 
         wavFileToTest.writeToFilePath();
     }
@@ -82,7 +78,7 @@ public class EncryptWav
                 case 2:
                     key = truncKey(key);
                     break;
-                case 3: 
+                default:
                     break;
         }
         
