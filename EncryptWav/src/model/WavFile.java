@@ -33,6 +33,7 @@ class WavFile
 
     private WavFile
             (
+                    //this is a random comment just for demo
                     String filePath,
                     SamplingInfo samplingInfo,
                     Sample[][] samplesForChannels
